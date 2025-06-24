@@ -1,0 +1,107 @@
+#go-to-apps{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+#AppStore {
+    // border: 5px solid green;
+    height: 100%;
+    width: 100%;
+    color: black;
+    // overflow: hidden;
+    // display: none;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(10px);
+    display:none;
+    grid-template-rows: 1fr .5fr 6fr;
+    padding: 1rem;
+
+    .googlesearch {
+        // border: 2px solid green;
+        width: 50%;
+        margin: auto;
+        padding: 2px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        border: 2px solid gray;
+        border-radius: 32px;
+
+        img {
+            height: 30px;
+
+        }
+
+        input {
+            padding: 10px;
+            font-size: .8rem;
+            background-color: transparent;
+            outline: none;
+            width: 100%;
+            border: none;
+        }
+    }
+
+    .heading {
+        // border: 2px solid red;
+        width:34%;
+    }
+
+    .Items {
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 70%;
+        margin: 0px auto;
+        height: 72%;
+        padding: 2rem;
+      
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: start;
+       gap: 4rem;
+        .appitem{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 5px;
+            gap: 2px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            color: black;
+            font-size: .9em;
+            transition: width 1s ease, background-color 0.2s;
+            max-width:6rem ;
+            height: 2rem;
+            overflow: hidden;
+            img{
+                height: 35px;
+                width: 35px;
+                border-radius: 10px;
+            }
+            p{
+                padding: 1px;
+                font-size: .8rem;
+                transform-origin: left;
+                animation: appitem 0.5s ease-out forwards;
+
+            }
+        }
+        @keyframes appitem {
+            0%{
+                opacity: 0;
+                transform: scaleX(0);
+            }
+            100%{
+                opacity: 1;
+                transform: scaleX(0.8);
+            }
+        }
+
+    }
+}

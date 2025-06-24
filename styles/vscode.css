@@ -1,0 +1,157 @@
+.vscode-wrapper {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+  width: 250px;
+  background-color: #252526; /* Darker sidebar background */
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  font-size: 10px;
+  font-weight: bold;
+  color: #888;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+.file-tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.file-tree li {
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-tree li:hover {
+  background-color: #333;
+}
+
+.file-tree li .icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Basic icons - you might replace these with actual icon fonts or SVGs */
+.icon.folder {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23a0a0a0" d="M14 4h-6.5l-.5-.5-1-1h-2l-1 1-.5.5v10h12z"/></svg>');
+}
+
+.icon.file {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23a0a0a0" d="M14 3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h10c.55 0 1-.45 1-1zM9 13H5V5h4z"/></svg>');
+}
+
+/* --- Main Content Styling (Editor Area) --- */
+.main-content {
+  flex-grow: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e; /* Editor background */
+}
+
+/* Tabs Bar */
+.tabs-bar {
+  display: flex;
+  background-color: #252526;
+  border-bottom: 1px solid #333;
+  padding-left: 5px;
+  box-sizing: border-box;
+  min-height: 35px;
+}
+
+.tab {
+  padding: 8px 15px;
+  border-right: 1px solid #333;
+  color: #888;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tab.active {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-top: 2px solid #007acc; /* VS Code blue accent */
+  margin-top: -2px; /* Pulls active tab up slightly */
+}
+
+.close-tab {
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 1;
+  color: #888;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-tab:hover {
+  color: #fff;
+}
+
+/* Editor Container */
+.editor-container {
+  flex-grow: 1; /* Editor takes all available vertical space */
+  position: relative; /* Needed for absolute positioning of potential editor overlays */
+  overflow: hidden; /* Hide scrollbars if content overflows initially */
+  padding: 0; /* Remove any padding that might interfere with 100% height */
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #007acc; /* VS Code blue status bar */
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  min-height: 22px;
+}
+
+.status-bar span {
+  margin-right: 15px;
+}
+
+.status-bar .status-right span {
+  margin-left: 15px;
+  margin-right: 0; /* No right margin for the last item */
+}
+
+/* Basic styling for the editor div itself - actual editor content will be inside this */
+#editor {
+  /* These styles are essential for the content to fill the parent */
+  height: 100%;
+  width: 100%;
+  background-color: #1e1e1e; /* Ensure the background matches the main content */
+  color: #cccccc;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace; /* Monospace font for code */
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+  overflow: auto; /* Allow scrolling within the editor if content overflows */
+  box-sizing: border-box; /* Include padding in dimensions */
+  padding: 10px; /* Some padding for readability */
+}
+
+/* If you plan to use a library like Monaco Editor, it will manage its own styles within #editor *//*# sourceMappingURL=vscode.css.map */

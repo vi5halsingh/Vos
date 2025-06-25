@@ -1,5 +1,10 @@
 import { appWindow } from '../components/appWindow.js'
+document.addEventListener("DOMContentLoaded", ()=>{
 
+
+const google = (window.appItems).find(item =>{
+   item.cls === 'google'
+})
 
 const windowel = document.querySelectorAll('.google')
 
@@ -15,13 +20,10 @@ windowel.forEach(element => {
 //   allowfullscreen>
 // </iframe>`
        
-       
-    appWindow({title:"Google" , content , id:"appwindow" })
+    appWindow({title:"Google" , content , id:"appwindow" , bg:"white"})
     })
     
 });
 
-// document.getElementById('terminal').addEventListener('click',(e) =>{
-//     const content = `<h1>i am terminal </h1>`
-// appWindow({title:"terminal" , content , id:"appwindow" })
-// })
+
+})

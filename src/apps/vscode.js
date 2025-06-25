@@ -1,6 +1,7 @@
 import {appWindow}  from '../components/appWindow.js'
 
-
+document.addEventListener('DOMContentLoaded', e =>{
+    
 const windowel = document.querySelectorAll('.vscode')
 // console.log( windowel)
 windowel.forEach(element => {
@@ -44,13 +45,5 @@ windowel.forEach(element => {
     
 });
 
-// require(['vs/editor/editor.main'], () => {
-//   monaco.editor.create(document.getElementById('editor'), {
-//     value: "// type your code here",
-//     language: "javascript"
-//   });
-// });
-// document.getElementById('vscode').addEventListener('click',(e) =>{
-//     const content = `<h1>i am visula studio code </h1>`
-// appWindow({title:"vs code" , content , id:"appwindow" })
-// })
+
+})

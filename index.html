@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <!-- <section id="startSection">
+    <section id="startSection">
         <h1 id="startingPoint">
             Click anywhere to start
         </h1>
@@ -30,7 +30,17 @@
                 LOADING...
             </p>
         </h1>
-    </section> -->
+    </section>
+    <section id="loginScreen">
+        <div class="login-container">
+          <h2>Welcome</h2>
+          <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required  />
+            <input type="password" id="password" placeholder="Password" required  />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </section>
     <section id="desktop">
         <div class="topbar"><span>Vishu</span>
             <section id="dateTime">
@@ -39,6 +49,7 @@
         </section></div>
         <div id="desktopApp">
             <div class="desktopIcon"><img src="./public/icons/Recycle_bin_full.webp" alt=""></div>
+            <div class="desktopIcon sheryianscodingschool" id=""><img src="./public/icons/seriyans.png" alt=""></div>
             <div class="desktopIcon vscode"><img src="https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif" alt=""></div>
             <div class="desktopIcon google" ><img src="./public/icons/google.svg" alt=""></div>
         </div>
@@ -50,9 +61,10 @@
           
         <section id="taskbarRight">
             <div id="taskbarApp">
-                <span class="app google" id=""><img src="./public/icons/google.svg" alt=""></span>
-                <span class="app sheryianscodingschool" id=""><img src="./public/icons/seriyans.png" alt=""></span>
+                <span class="app google" id="" ><img src="./public/icons/google.svg" alt=""></span>
+              
                 <span class="app vscode" id=""><img src="https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif" alt=""></span>
+                <span class="app portfolio" style="border-radius: 10px;" ><img src="./public/icons/vishal.png" alt=""></span>
                 <span class="app terminal"  id=""><img style="color: blue; background-color: blue; border-radius:10px; " src="./public/icons/terminal-line.svg" alt=""></span>
                 
             </div>
@@ -61,7 +73,9 @@
                 <span id="first">
                     <span class="itemOfFirst"><img src="./public/icons/Group 494.svg" alt=""></span>
                     <span class="itemOfFirst"><img src="./public/icons/effect.svg" alt=""></span>
+                 
                     <span class="itemOfFirst"><img src="./public/icons/desktop.svg" alt=""></span>
+
                 </span>
                 <span id="second">
                     <span class="itemOfSecond"><img src="./public/icons/battery.svg" alt=""></span>
@@ -182,8 +196,34 @@
      <div class="Items">
       
     </div>
+   
+    </section>
+    <section id="contextMenu">
+        <div class="uperside">
+
+            <div class="refresh">Refresh</div>
+            <div class="view">View</div>
+            <div class="new">New</div>
+        </div>
+        <hr>
+        <div class="blowside">
+
+        </div>
     </section>
     </section>
+<script>
+    const loginScreen = document.getElementById('loginScreen')
+    const loginForm = document.getElementById('loginForm')
+    
+    if (loginForm && loginScreen) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        loginScreen.style.display = 'none';
+        desktop.style.display = 'block';
+      });
+    }
+ 
+</script>
     <script src="./src/main.js"></script>
     <script type="module" src="./src/components/appWindow.js"></script>
     <script type="module" src="./src/apps/sheryinas.js"></script>

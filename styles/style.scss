@@ -26,6 +26,10 @@ body {
       font-style: normal;
       font-size: 1.5rem;
       position: absolute;
+      // height: 100%;
+      // width: 100%;
+      text-align: center;
+      justify-self: center;
 
     }
 
@@ -46,8 +50,8 @@ body {
     background-size: 100% 100%; // Expands the image to fill both width and height
     background-position: center;
     border:2px;
-  }
     position: relative;
+    display: none;
  
     .topbar{
       height: 20px;
@@ -207,13 +211,17 @@ body {
               border-radius: 10px;
               padding: 5px;
               height: 20px;  
-
+        //  img{
+        //   height: 40px;
+        //   width: 40px;
+        //  }
               &:hover {
                 // background-color: black;
                 // height: 100%;
                 transform: scale(1.1);
               }
             }
+          
           }
 
           #second {
@@ -584,5 +592,81 @@ span{
       }
     }
 
-
+  }
+  #loginScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(16px);
+    transition: opacity 0.3s;
+  
+    .login-container {
+      background: rgba(45, 45, 45, 0.7);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      padding: 2.5rem 2.5rem 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      max-width: 90vw;
+      color: #fff;
+      font-family: "Orbitron", "Press Start 2P", system-ui, sans-serif;
+      border: 2px solid #888;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width: 100%;
+    }
+    input {
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-family: inherit;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    input:focus {
+      background: rgba(255,255,255,0.18);
+    }
+    button {
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
+      border: none;
+      background: #2D2D2D;
+      color: #fff;
+      font-size: 1.1rem;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: background 0.2s, color 0.2s;
+    }
+    button:hover {
+      background: #444;
+      color: #fff;
+    }
+  }
+  
   }

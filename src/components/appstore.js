@@ -1,53 +1,67 @@
-
-
 let itemcontainer = document.querySelector('.Items')
 
-const apps = [
-    {
-        img:"./public/icons/mail.svg",
-        name:"Email"
-    },
-    {
-        img:"./public/icons/vishal.png",
-        name:"Portfolio"
-    },
-    {
-        img:"./public/icons/seriyans.png",
-        name:"Sheryians Coding School"
-    },
-    {
-        img:"./public/icons/terminal-line.svg",
-        name:"Terminal"
-    },
-    {
-        img:"./public/icons/Group 493.png",
-        name:"Music"
-    },
-    {
-        img:"https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif",
-        name:"VS Code"
-    },
+// const apps = [
+//     {
+//         img:"./public/icons/mail.svg",
+//         name:"Email"
+//     },
+//     {
+//         img:"./public/icons/mail.svg",
+//         name:"Email"
+//     },
+//     {
+//         img:"./public/icons/mail.svg",
+//         name:"Email"
+//     },
+//     {
+//         img:"./public/icons/mail.svg",
+//         name:"Email"
+//     },
+//     {
+//         img:"./public/icons/mail.svg",
+//         name:"Email"
+//     },
+//     {
+//         img:"./public/icons/vishal.png",
+//         name:"Portfolio"
+//     },
+//     {
+//         img:"./public/icons/seriyans.png",
+//         name:"Sheryians Coding School"
+//     },
+//     {
+//         img:"./public/icons/terminal-line.svg",
+//         name:"Terminal"
+//     },
+//     {
+//         img:"./public/icons/Group 493.png",
+//         name:"Music"
+//     },
+//     {
+//         img:"https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif",
+//         name:"VS Code"
+//     },
   
     
     
-]
-apps.forEach((app) => {
-    const appItem = document.createElement('span');
-    appItem.className = 'appitem';
+// ]
+// apps.forEach((app) => {
+//     const appItem = document.createElement('span');
+//     appItem.className = 'appitem';
 
-    const img = document.createElement('img');
-    img.src = app.img;
-    img.alt = '';
+//     const img = document.createElement('img');
+//     img.src = app.img;
+//     img.alt = '';
 
-    const label = document.createElement('p');
-    label.style.display = 'none';
-    label.textContent = (app.name).slice(0 , 15) + "...";
+//     const label = document.createElement('p');
+//     label.style.display = 'none';
+//     label.textContent = (app.name).slice(0 , 15) + "...";
 
-    appItem.appendChild(img);
-    appItem.appendChild(label);
+//     appItem.appendChild(img);
+//     appItem.appendChild(label);
 
-    itemcontainer.appendChild(appItem);
-});
+//     itemcontainer.appendChild(appItem);
+// });
 
 
 const gotoappbtn = document.getElementById('go-to-apps')
@@ -76,3 +90,37 @@ document.querySelector('.Items').addEventListener('mouseout', (e) => {
       if (label) label.style.display = 'none';
     }
   });
+
+ const appItems = [
+  { icon: './public/icons/mail.svg', name: 'Mail', cls:"mail" },
+  { icon: './public/icons/vishal.png', name: 'Portfolio',cls:"portfolio" },
+  { icon: './public/icons/seriyans.png', name: 'sheryians coding school',   cls:"sheryianscodingschool"},
+  { icon: './public/icons/google.svg', name: 'Google',  cls:"google"},
+  { icon: './public/icons/terminal-line.svg', name: 'Terminal',  cls:"terminal" },
+  { icon: './public/icons/Group 493.png', name: 'Music', cls:"music" },
+  { icon: 'https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif', name: 'VSCode' , cls:"vscode" },
+  // Add more items as needed
+];
+
+
+const itemsContainer = document.querySelector('#AppStore .Items');
+itemsContainer.innerHTML = appItems.map(item => `
+  <div class="${item.cls} appitem">
+    <img src="${item.icon}" alt="${item.name}" />
+    <p style="display:none">${item.name} </p>
+  </div>
+`).join('');
+
+
+const windowel = document.querySelectorAll('.portfolio')
+import { appWindow } from '../components/appWindow.js'
+windowel.forEach(element => {
+       element.addEventListener('click',(e) =>{
+        const content = `
+        <iframe class="fullSpace" frameborder=0 src="https://vi5hal.vercel.app/" style="height:100%; width:100%"></iframe>
+        `
+    appWindow({title:"Vishal" , content , id:"appwindow" , bg:"#1a1a1a" })
+    })
+    
+});
+window.appItems = appItems

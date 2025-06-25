@@ -1,7 +1,12 @@
 import { appWindow } from '../components/appWindow.js'
+document.addEventListener('DOMContentLoaded', e =>{
+
 
 const windowel = document.querySelectorAll('.terminal')
-
+const terminal = (window.appItems).find(item =>{
+    item.cls === 'terminal'
+ })
+ 
 windowel.forEach(element => {
        element.addEventListener('click',(e) =>{
         const content = `
@@ -11,3 +16,5 @@ windowel.forEach(element => {
     })
     
 });
+
+})

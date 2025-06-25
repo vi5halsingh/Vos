@@ -4,15 +4,19 @@ const desktop = document.getElementById('desktop')
 const bootH1 = document.getElementById('bootPoint')
 const menubtn = document.getElementById('menu')
 const menubar = document.getElementById('menubar')
+// const loginScreen = document.getElementById('loginScreen')
+// const loginForm = document.getElementById('loginForm')
 
 
-document.addEventListener('click',async (e)=>{
+startSection.addEventListener('click',async (e)=>{
     e.preventDefault();
     startH1.style.display = 'none'
     bootH1.style.display = 'block'
 setTimeout(() => {
     startSection.style.display = 'none'
+    loginScreen.style.display = "flex"
     desktop.style.display = 'block'
+
 }, 3000);
 
 })
@@ -27,14 +31,34 @@ menubtn.addEventListener('click',(e) =>{
     
 })
 
+
+
+const contextMenu =  document.getElementById('contextMenu')
 desktop.addEventListener('contextmenu' ,(e) =>{
     e.preventDefault()
-    alert("context")
+    if(contextMenu.style.display === "none"){
+        contextMenu.style.display =  "block"
+    }
+    else{
+        contextMenu.style.display = "none"
+    }
 })
+const view = document.querySelector('.view')
+view.addEventListener('click', (e) =>{
+    // alert("hide app")
+    if(document.getElementById('desktopApp').style.display ==='none'){
+        document.getElementById('desktopApp').style.display  = "flex"
+         view.style.backgroundColor = 'transparent'
+    } 
+    else{
+        document.getElementById('desktopApp').style.display = "none"
+        view.style.backgroundColor = 'gray'
+    }
+})
+desktop.onclick = () =>{
+  contextMenu.style.display = "none"
+}
 
-// //   Hide menubar when clicking outside of it, but not when clicking the menu button
-//   document.addEventListener('click', (e) => {
-//     const menubar = document.getElementById('menubar')
-//         menubar.style.display = 'none';
-    
-//   });
+  // Inline login form handler
+
+

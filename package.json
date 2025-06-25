@@ -1,0 +1,6 @@
+{
+  
+  "scripts": {
+  "build": "sass styles:styles --no-source-map"
+}
+}

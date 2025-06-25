@@ -1,66 +1,74 @@
-body{ color:#fff; height:100vh; position:relative; overflow:hidden; text-align:center; display:flex; justify-content:center; align-items:center; margin:0; padding:0; position:relative }
+body{ color:#fff; height:100vh; position:relative; overflow:hidden; text-align:center; display:flex; justify-content:center; align-items:center; margin:0; padding:0 }
 body #startSection{ position:absolute; width:100%; height:100%; background-color:#000; display:flex; justify-content:center; align-items:center }
-body #startSection h1{ font-family:"Press Start 2P",system-ui; font-weight:400; font-style:normal; font-size:1.5rem; position:absolute }
+body #startSection h1{ font-family:"Press Start 2P",system-ui; font-weight:400; font-style:normal; font-size:1.5rem; position:absolute; text-align:center; justify-self:center }
 body #startSection #bootPoint{ display:none; font-size:1rem }
-body #desktop{ height:100%; width:100%; overflow:hidden; background-image:url("../public/light bg.avif"); color:#000; background-repeat:no-repeat; background-size:100% 100%; background-position:center; border:2px }
-body .topbar{ height:20px; border-bottom:1px solid #888; backdrop-filter:blur(20px); color:#000; display:flex; justify-content:space-between; padding:0 10px; font-size:.8rem; align-items:center; font-family:"Orbitron",sans-serif; font-optical-sizing:auto; font-weight:bold; font-style:normal }
-body .topbar #dateTime{ display:flex; margin:0px 5px; align-items:center; justify-content:center; gap:3px }
-body .topbar #dateTime #date{ padding:10px 10px; border-radius:20px 5px 5px 20px }
-body .topbar #dateTime #time{ padding:10px 10px; border-radius:5px 20px 20px 5px }
-body #desktopApp{ display:flex }
-body #desktopApp .desktopIcon{ border:2px solid gray; border-radius:10px; height:2rem; width:2rem; cursor:pointer; padding:5px; margin:1rem }
-body #desktopApp .desktopIcon img{ object-fit:cover; height:100%; width:100% }
-body #taskbarBody{ position:absolute; bottom:0%; left:10%; width:80%; height:56px; border-radius:30px; padding:0px 10px 0px 10px; backdrop-filter:blur(10px); border:2px solid gray; display:flex; justify-content:space-between; align-items:center; z-index:10 }
-body #taskbarBody .window{ height:40px; width:40px; cursor:pointer }
-body #taskbarBody #filemanager{ height:40px; width:40px; cursor:pointer }
-body #taskbarBody #filemanager img{ height:100%; width:100% }
-body #taskbarBody #taskbarRight{ padding:0px 10px; width:70%; display:flex; justify-content:end; align-items:center }
-body #taskbarBody #taskbarRight #taskbarApp{ padding:0 10px; width:40%; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:1.5rem; padding:5px 2rem }
-body #taskbarBody #taskbarRight #taskbarApp .app{ cursor:pointer; font-size:.2rem; overflow:hidden; height:40px; width:40px }
-body #taskbarBody #taskbarRight #taskbarApp .app:hover{ transform:scale(1.1) }
-body #taskbarBody #taskbarRight #taskbarApp .app img{ object-fit:cover; height:30px; width:30px }
-body #taskbarBody #taskbarRight #shortcut{ display:flex; padding:4px 5px; margin-right:5px; font-size:.5rem; align-items:center; justify-content:center; gap:3px; border-radius:10px }
-body #taskbarBody #taskbarRight #shortcut #first{ padding:2px 10px; background-color:rgba(20,20,20,.623); border-radius:25px 5px 5px 25px; display:flex; align-items:center; justify-content:center; gap:10px }
-body #taskbarBody #taskbarRight #shortcut #first .itemOfFirst{ cursor:pointer; border-radius:10px; padding:5px; height:20px }
-body #taskbarBody #taskbarRight #shortcut #first .itemOfFirst:hover{ transform:scale(1.1) }
-body #taskbarBody #taskbarRight #shortcut #second{ display:flex; padding:2px 10px; background-color:rgba(20,20,20,.623); border-radius:5px 25px 25px 5px; align-items:center; justify-content:center; gap:10px }
-body #taskbarBody #taskbarRight #shortcut #second .itemOfSecond{ margin-left:2px; cursor:pointer; border-radius:10px; padding:5px; height:20px }
-body #taskbarBody #taskbarRight #shortcut #second .itemOfSecond:hover{ transform:scale(1.1) }
-body #taskbarBody #taskbarRight #menu{ font-size:.5rem; cursor:pointer; border-radius:10px; height:40px }
-body #taskbarBody #taskbarRight #menu img{ height:40px; width:40px }
-body #taskbarBody #taskbarRight #menu:hover{ transform:scale(1.1) }
-body #taskbarBody .filemanager,body #taskbarBody .window{ cursor:pointer }
-body #menubar{ height:550px; width:450px; position:absolute; bottom:9%; right:0%; padding:5px; display:none; z-index:10000 }
-body #menubar .menuHead{ background-color:#2d2d2d; width:420px; height:60px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:0 .5rem; border-radius:50px }
-body #menubar .menuHead #manuheadnav{ background-color:gray; margin-left:1em; padding:0 1rem 0 0; border-radius:25px }
-body #menubar .menuHead #manuheadnav .navitems{ height:100%; margin-left:1rem; cursor:pointer }
-body #menubar .menuHead .clearnotification{ text-align:center; cursor:pointer; padding:8px 12px; margin-right:1rem; border-radius:32px; background-color:gray }
-body #menubar #manuContent{ width:420px; background-color:#2d2d2d; border-radius:40px; height:470px; margin:auto; margin-top:2px; padding:10px }
-body #menubar #manuContent .first .smallcontainer1{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
-body #menubar #manuContent .first .smallcontainer1 .box1,body #menubar #manuContent .first .smallcontainer1 .box2{ height:100%; width:50%; background-color:#fff; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
-body #menubar #manuContent .first .smallcontainer1 .box1 span,body #menubar #manuContent .first .smallcontainer1 .box2 span{ display:flex; align-items:center; justify-content:space-between; gap:10px; width:50%; cursor:pointer }
-body #menubar #manuContent .first .smallcontainer1 .box2{ height:100%; width:50%; background-color:#fff; border-radius:32px }
-body #menubar #manuContent .first .smallcontainer2{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
-body #menubar #manuContent .first .smallcontainer2 .box1{ height:100%; width:50%; background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
-body #menubar #manuContent .first .smallcontainer2 .box1 span{ display:flex; align-items:center; justify-content:space-evenly; gap:10px; width:50%; cursor:pointer }
-body #menubar #manuContent .first .smallcontainer2 .box2{ background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000; height:100%; width:50% }
-body #menubar #manuContent .first .smallcontainer2 .box2 span{ display:flex; align-items:center; justify-content:space-between; gap:10px; width:50%; cursor:pointer }
-body #menubar #manuContent .first .smallcontainer3{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
-body #menubar #manuContent .first .smallcontainer3 .box1{ height:100%; width:50%; background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
-body #menubar #manuContent .first .smallcontainer3 .box1 span{ display:flex; justify-content:center; align-items:center; gap:10px; cursor:pointer }
-body #menubar #manuContent .first .smallcontainer3 .box2{ height:100%; width:50%; display:flex; align-items:center; justify-content:center; border-radius:32px; border-radius:32px; display:flex; gap:5px }
-body #menubar #manuContent .first .smallcontainer3 .box2 .ss{ height:100%; width:50%; color:#000; border-radius:32px; background-color:gray }
-body #menubar #manuContent .first .smallcontainer3 .box2 .ss span{ height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; width:50%; margin:auto; cursor:pointer }
-body #menubar #manuContent .first .smallcontainer3 .box2 .keyboard{ height:100%; width:50%; color:#000; border-radius:32px; background-color:gray }
-body #menubar #manuContent .first .smallcontainer3 .box2 .keyboard span{ height:70%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; width:50%; padding:8px; margin:auto; cursor:pointer }
-body #menubar #manuContent .first .more{ color:gray; font-size:2rem; display:flex; gap:2px; justify-content:center; align-items:center }
-body #menubar #manuContent .first .more div{ height:5px; border-radius:10px; background-color:gray; width:15px }
-body #menubar #manuContent .second{ display:flex; flex-direction:column; height:100px; margin-top:5px; gap:5px; overflow:hidden; width:90% }
-body #menubar #manuContent .second #sound{ background-color:gray; border-radius:32px; height:50%; display:flex; align-items:center; justify-content:end; padding:0 10px }
-body #menubar #manuContent .second #sound img{ cursor:pointer }
-body #menubar #manuContent .second #brightness{ background-color:gray; border-radius:32px; padding:0 10px; height:50%; display:flex; align-items:center; justify-content:end }
-body #menubar #manuContent .second #brightness img{ cursor:pointer }
-body #menubar #manuContent .third{ display:flex; width:100%; align-items:center; justify-content:space-between; height:50px; margin-top:5px; overflow:hidden; width:90%; padding:1px; border:2px solid gray; border-radius:32px }
-body #menubar #manuContent .third .left{ display:flex; align-items:center; justify-content:start; gap:1rem; padding:0 5px }
-body #menubar #manuContent .third .left img{ cursor:pointer }
-body #menubar #manuContent .third span{ cursor:pointer; margin-right:10px }
+body #desktop{ height:100%; width:100%; overflow:hidden; background-image:url("../public/light bg.avif"); color:#000; background-repeat:no-repeat; background-size:100% 100%; background-position:center; border:2px; position:relative; display:none }
+body #desktop .topbar{ height:20px; border-bottom:1px solid #888; backdrop-filter:blur(20px); color:#000; display:flex; justify-content:space-between; padding:0 10px; font-size:.8rem; align-items:center; font-family:"Orbitron",sans-serif; font-optical-sizing:auto; font-weight:bold; font-style:normal }
+body #desktop .topbar #dateTime{ display:flex; margin:0px 5px; align-items:center; justify-content:center; gap:3px }
+body #desktop .topbar #dateTime #date{ padding:10px 10px; border-radius:20px 5px 5px 20px }
+body #desktop .topbar #dateTime #time{ padding:10px 10px; border-radius:5px 20px 20px 5px }
+body #desktop #desktopApp{ display:flex }
+body #desktop #desktopApp .desktopIcon{ border:2px solid gray; border-radius:10px; height:2rem; width:2rem; cursor:pointer; padding:5px; margin:1rem }
+body #desktop #desktopApp .desktopIcon img{ object-fit:cover; height:100%; width:100% }
+body #desktop #taskbarBody{ position:absolute; bottom:0%; left:10%; width:80%; height:56px; border-radius:30px; padding:0px 10px 0px 10px; backdrop-filter:blur(10px); border:2px solid gray; display:flex; justify-content:space-between; align-items:center; z-index:10 }
+body #desktop #taskbarBody .window{ height:40px; width:40px; cursor:pointer }
+body #desktop #taskbarBody #filemanager{ height:40px; width:40px; cursor:pointer }
+body #desktop #taskbarBody #filemanager img{ height:100%; width:100% }
+body #desktop #taskbarBody #taskbarRight{ padding:0px 10px; width:70%; display:flex; justify-content:end; align-items:center }
+body #desktop #taskbarBody #taskbarRight #taskbarApp{ padding:0 10px; width:40%; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:1.5rem; padding:5px 2rem }
+body #desktop #taskbarBody #taskbarRight #taskbarApp .app{ cursor:pointer; font-size:.2rem; overflow:hidden; height:40px; width:40px }
+body #desktop #taskbarBody #taskbarRight #taskbarApp .app:hover{ transform:scale(1.1) }
+body #desktop #taskbarBody #taskbarRight #taskbarApp .app img{ object-fit:cover; height:30px; width:30px }
+body #desktop #taskbarBody #taskbarRight #shortcut{ display:flex; padding:4px 5px; margin-right:5px; font-size:.5rem; align-items:center; justify-content:center; gap:3px; border-radius:10px }
+body #desktop #taskbarBody #taskbarRight #shortcut #first{ padding:2px 10px; background-color:rgba(20,20,20,.623); border-radius:25px 5px 5px 25px; display:flex; align-items:center; justify-content:center; gap:10px }
+body #desktop #taskbarBody #taskbarRight #shortcut #first .itemOfFirst{ cursor:pointer; border-radius:10px; padding:5px; height:20px }
+body #desktop #taskbarBody #taskbarRight #shortcut #first .itemOfFirst:hover{ transform:scale(1.1) }
+body #desktop #taskbarBody #taskbarRight #shortcut #second{ display:flex; padding:2px 10px; background-color:rgba(20,20,20,.623); border-radius:5px 25px 25px 5px; align-items:center; justify-content:center; gap:10px }
+body #desktop #taskbarBody #taskbarRight #shortcut #second .itemOfSecond{ margin-left:2px; cursor:pointer; border-radius:10px; padding:5px; height:20px }
+body #desktop #taskbarBody #taskbarRight #shortcut #second .itemOfSecond:hover{ transform:scale(1.1) }
+body #desktop #taskbarBody #taskbarRight #menu{ font-size:.5rem; cursor:pointer; border-radius:10px; height:40px }
+body #desktop #taskbarBody #taskbarRight #menu img{ height:40px; width:40px }
+body #desktop #taskbarBody #taskbarRight #menu:hover{ transform:scale(1.1) }
+body #desktop #taskbarBody .filemanager,body #desktop #taskbarBody .window{ cursor:pointer }
+body #desktop #menubar{ height:550px; width:450px; position:absolute; bottom:9%; right:0%; padding:5px; display:none; z-index:10000 }
+body #desktop #menubar .menuHead{ background-color:#2d2d2d; width:420px; height:60px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:0 .5rem; border-radius:50px }
+body #desktop #menubar .menuHead #manuheadnav{ background-color:gray; margin-left:1em; padding:0 1rem 0 0; border-radius:25px }
+body #desktop #menubar .menuHead #manuheadnav .navitems{ height:100%; margin-left:1rem; cursor:pointer }
+body #desktop #menubar .menuHead .clearnotification{ text-align:center; cursor:pointer; padding:8px 12px; margin-right:1rem; border-radius:32px; background-color:gray }
+body #desktop #menubar #manuContent{ width:420px; background-color:#2d2d2d; border-radius:40px; height:470px; margin:auto; margin-top:2px; padding:10px }
+body #desktop #menubar #manuContent .first .smallcontainer1{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
+body #desktop #menubar #manuContent .first .smallcontainer1 .box1,body #desktop #menubar #manuContent .first .smallcontainer1 .box2{ height:100%; width:50%; background-color:#fff; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
+body #desktop #menubar #manuContent .first .smallcontainer1 .box1 span,body #desktop #menubar #manuContent .first .smallcontainer1 .box2 span{ display:flex; align-items:center; justify-content:space-between; gap:10px; width:50%; cursor:pointer }
+body #desktop #menubar #manuContent .first .smallcontainer1 .box2{ height:100%; width:50%; background-color:#fff; border-radius:32px }
+body #desktop #menubar #manuContent .first .smallcontainer2{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
+body #desktop #menubar #manuContent .first .smallcontainer2 .box1{ height:100%; width:50%; background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
+body #desktop #menubar #manuContent .first .smallcontainer2 .box1 span{ display:flex; align-items:center; justify-content:space-evenly; gap:10px; width:50%; cursor:pointer }
+body #desktop #menubar #manuContent .first .smallcontainer2 .box2{ background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000; height:100%; width:50% }
+body #desktop #menubar #manuContent .first .smallcontainer2 .box2 span{ display:flex; align-items:center; justify-content:space-between; gap:10px; width:50%; cursor:pointer }
+body #desktop #menubar #manuContent .first .smallcontainer3{ height:88px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:5px 0 }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box1{ height:100%; width:50%; background-color:gray; display:flex; align-items:center; justify-content:center; border-radius:32px; color:#000 }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box1 span{ display:flex; justify-content:center; align-items:center; gap:10px; cursor:pointer }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box2{ height:100%; width:50%; display:flex; align-items:center; justify-content:center; border-radius:32px; border-radius:32px; display:flex; gap:5px }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box2 .ss{ height:100%; width:50%; color:#000; border-radius:32px; background-color:gray }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box2 .ss span{ height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; width:50%; margin:auto; cursor:pointer }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box2 .keyboard{ height:100%; width:50%; color:#000; border-radius:32px; background-color:gray }
+body #desktop #menubar #manuContent .first .smallcontainer3 .box2 .keyboard span{ height:70%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; width:50%; padding:8px; margin:auto; cursor:pointer }
+body #desktop #menubar #manuContent .first .more{ color:gray; font-size:2rem; display:flex; gap:2px; justify-content:center; align-items:center }
+body #desktop #menubar #manuContent .first .more div{ height:5px; border-radius:10px; background-color:gray; width:15px }
+body #desktop #menubar #manuContent .second{ display:flex; flex-direction:column; height:100px; margin-top:5px; gap:5px; overflow:hidden; width:90% }
+body #desktop #menubar #manuContent .second #sound{ background-color:gray; border-radius:32px; height:50%; display:flex; align-items:center; justify-content:end; padding:0 10px }
+body #desktop #menubar #manuContent .second #sound img{ cursor:pointer }
+body #desktop #menubar #manuContent .second #brightness{ background-color:gray; border-radius:32px; padding:0 10px; height:50%; display:flex; align-items:center; justify-content:end }
+body #desktop #menubar #manuContent .second #brightness img{ cursor:pointer }
+body #desktop #menubar #manuContent .third{ display:flex; width:100%; align-items:center; justify-content:space-between; height:50px; margin-top:5px; overflow:hidden; width:90%; padding:1px; border:2px solid gray; border-radius:32px }
+body #desktop #menubar #manuContent .third .left{ display:flex; align-items:center; justify-content:start; gap:1rem; padding:0 5px }
+body #desktop #menubar #manuContent .third .left img{ cursor:pointer }
+body #desktop #menubar #manuContent .third span{ cursor:pointer; margin-right:10px }
+body #loginScreen{ position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:2000; display:none; align-items:center; justify-content:center; background:rgba(30,30,30,.4); backdrop-filter:blur(16px); transition:opacity .3s }
+body #loginScreen .login-container{ background:rgba(45,45,45,.7); border-radius:32px; box-shadow:0 8px 32px 0 rgba(31,38,135,.37); padding:2.5rem 2.5rem 2rem 2.5rem; display:flex; flex-direction:column; align-items:center; min-width:320px; max-width:90vw; color:#fff; font-family:"Orbitron","Press Start 2P",system-ui,sans-serif; border:2px solid #888 }
+body #loginScreen h2{ margin-bottom:1.5rem; font-size:2rem; font-family:"Press Start 2P",system-ui; font-weight:400; letter-spacing:2px }
+body #loginScreen form{ display:flex; flex-direction:column; gap:1.2rem; width:100% }
+body #loginScreen input{ padding:.8rem 1.2rem; border-radius:16px; border:none; outline:none; font-size:1rem; background:hsla(0,0%,100%,.08); color:#fff; font-family:inherit; box-shadow:0 2px 8px rgba(0,0,0,.08); transition:background .2s }
+body #loginScreen input:focus{ background:hsla(0,0%,100%,.18) }
+body #loginScreen button{ padding:.8rem 1.2rem; border-radius:16px; border:none; background:#2d2d2d; color:#fff; font-size:1.1rem; font-family:inherit; font-weight:bold; cursor:pointer; margin-top:.5rem; box-shadow:0 2px 8px rgba(0,0,0,.12); transition:background .2s,color .2s }
+body #loginScreen button:hover{ background:#444; color:#fff }

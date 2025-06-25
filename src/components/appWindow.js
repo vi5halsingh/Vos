@@ -1,16 +1,20 @@
-export function appWindow ({title , content , id}){
+
+
+export function appWindow ({title , content , id, bg}){
+
+  
   const desktop = document.getElementById('desktop')
     const appWindow = document.createElement('section')
     appWindow.className = 'app-window'
     appWindow.id = "appwindow" || id || `app-${Date.now()}`;
     appWindow.innerHTML = `
-     <div class="windowHeader">
+     <div class="windowHeader" style="background-color:${bg}">
         <div class="left">${title}</div>
-        <div class="right">
-         <button class="minimize" style="background:none; border:none; color:white; font-size:1rem; cursor:pointer;">–</button>
-        <button class="maximize" style="background:none; border:none; color:white; font-size:.8rem; cursor:pointer; display:none;">⬜</button>
-         <button class="pip" style="background:none;  border:none; color:white; font-size:.8rem; cursor:pointer;">📺</button>
-        <button class="close" style="background:none; border:none; color:white; font-size:1rem; cursor:pointer;">×</button>
+         <div class="right">
+         <button class="minimize" style="background:rgb(150, 147, 4);;border-radius:30px;   border:none; color:white; font-size:1rem; cursor:pointer;">–</button>
+        <button class="maximize" style="background:green; border-radius:30px;  border:none; color:white; font-size:.5rem; cursor:pointer; border-radius:30px;  display:none;">⬜</button>
+         <button class="pip" style="background:gray;  border-radius:30px;  border:none; color:white; font-size:.5rem; cursor:pointer;">📺</button>
+        <button class="close" style="background:red; border-radius:30px; border:none; color:white; font-size:1rem; cursor:pointer;">×</button>
         </div>
         </div>
      <div id="windowContent">${content}</div>
@@ -207,7 +211,10 @@ export function appWindow ({title , content , id}){
        document.body.style.userSelect = '';
      }
    });
+   
+
  }
+
 
 
 let date = document.getElementById('date');
@@ -229,6 +236,6 @@ if (date) {
    const ampm = hours >= 12 ? 'PM' : 'AM';
    hours = hours % 12;
    hours = hours ? hours : 12; 
-   time.innerHTML = `${hours}:${minutes} ${ampm}`;
+   time.innerHTML = `0${hours}:${minutes} ${ampm}`;
  }
 

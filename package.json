@@ -1,6 +1,8 @@
 {
-  
   "scripts": {
-  "build": "sass styles:styles --no-source-map"
-}
+    "build": "sass styles:styles --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
 }

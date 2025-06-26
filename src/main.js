@@ -8,18 +8,18 @@ const menubar = document.getElementById('menubar')
 // const loginForm = document.getElementById('loginForm')
 
 
-startSection.addEventListener('click',async (e)=>{
-    e.preventDefault();
-    startH1.style.display = 'none'
-    bootH1.style.display = 'block'
-setTimeout(() => {
-    startSection.style.display = 'none'
-    loginScreen.style.display = "flex"
-    desktop.style.display = 'block'
+// startSection.addEventListener('click',async (e)=>{
+//     e.preventDefault();
+//     startH1.style.display = 'none'
+//     bootH1.style.display = 'block'
+// setTimeout(() => {
+//     startSection.style.display = 'none'
+//     loginScreen.style.display = "flex"
+//     desktop.style.display = 'block'
 
-}, 3000);
+// }, 3000);
 
-})
+// })
 
 menubtn.addEventListener('click',(e) =>{
     if(menubar.style.display === 'none' || menubar.style.display === ''){
@@ -36,11 +36,11 @@ menubtn.addEventListener('click',(e) =>{
 const contextMenu =  document.getElementById('contextMenu')
 desktop.addEventListener('contextmenu' ,(e) =>{
     e.preventDefault()
-    if(contextMenu.style.display === "none"){
-        contextMenu.style.display =  "block"
+    if(contextMenu.style.display === "block"){
+        contextMenu.style.display =  "none"
     }
     else{
-        contextMenu.style.display = "none"
+        contextMenu.style.display = "block"
     }
 })
 const view = document.querySelector('.view')

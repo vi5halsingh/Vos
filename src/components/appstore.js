@@ -1,67 +1,5 @@
 let itemcontainer = document.querySelector('.Items')
 
-// const apps = [
-//     {
-//         img:"./public/icons/mail.svg",
-//         name:"Email"
-//     },
-//     {
-//         img:"./public/icons/mail.svg",
-//         name:"Email"
-//     },
-//     {
-//         img:"./public/icons/mail.svg",
-//         name:"Email"
-//     },
-//     {
-//         img:"./public/icons/mail.svg",
-//         name:"Email"
-//     },
-//     {
-//         img:"./public/icons/mail.svg",
-//         name:"Email"
-//     },
-//     {
-//         img:"./public/icons/vishal.png",
-//         name:"Portfolio"
-//     },
-//     {
-//         img:"./public/icons/seriyans.png",
-//         name:"Sheryians Coding School"
-//     },
-//     {
-//         img:"./public/icons/terminal-line.svg",
-//         name:"Terminal"
-//     },
-//     {
-//         img:"./public/icons/Group 493.png",
-//         name:"Music"
-//     },
-//     {
-//         img:"https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif",
-//         name:"VS Code"
-//     },
-  
-    
-    
-// ]
-// apps.forEach((app) => {
-//     const appItem = document.createElement('span');
-//     appItem.className = 'appitem';
-
-//     const img = document.createElement('img');
-//     img.src = app.img;
-//     img.alt = '';
-
-//     const label = document.createElement('p');
-//     label.style.display = 'none';
-//     label.textContent = (app.name).slice(0 , 15) + "...";
-
-//     appItem.appendChild(img);
-//     appItem.appendChild(label);
-
-//     itemcontainer.appendChild(appItem);
-// });
 
 
 const gotoappbtn = document.getElementById('go-to-apps')
@@ -123,4 +61,22 @@ windowel.forEach(element => {
     })
     
 });
+
+const mail = document.querySelectorAll('.mail')
+mail.forEach(element => {
+  element.addEventListener('click',(e) =>{
+    // e.preventDefault()
+    // alert("changing")
+   window.open('https://mail.google.com/')
+})
+
+});
+const music = document.querySelectorAll('.music')
+music.forEach(element => {
+  element.addEventListener('click',(e) =>{
+    // e.preventDefault()
+    // alert("changing")
+   window.open('https://open.spotify.com/')
+})
+})
 window.appItems = appItems

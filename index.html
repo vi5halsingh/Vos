@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/window.css">
     <link rel="stylesheet" href="./styles/vscode.css">
     <link rel="stylesheet" href="./styles/appstore.css">
+    <!-- <link rel="stylesheet" href="./styles/filemanager.css"> -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&display=swap');
@@ -20,7 +21,7 @@
 </head>
 
 <body>
-    <!-- <section id="startSection">
+    <section id="startSection">
         <h1 id="startingPoint">
             Click anywhere to start
         </h1>
@@ -30,7 +31,7 @@
                 LOADING...
             </p>
         </h1>
-    </section> -->
+    </section>
     <section id="loginScreen">
         <div class="login-container">
           <h2>Welcome</h2>
@@ -41,23 +42,25 @@
           </form>
         </div>
       </section>
+
     <section id="desktop">
-        <div class="topbar"><span>Vishu</span>
+        <div class="topbar"><span>Vos</span>
             <section id="dateTime">
             <span id="date">21-06-2025 , suterday</span>
             <span id="time">17:26 PM</span>    
         </section></div>
         <div id="desktopApp">
             <div class="desktopIcon"><img src="./public/icons/Recycle_bin_full.webp" alt=""></div>
+            <div class="desktopIcon chatgpt"><img src="./public/icons/chatgpt.svg" alt=""></div>
             <div class="desktopIcon sheryianscodingschool" id=""><img src="./public/icons/seriyans.png" alt=""></div>
             <div class="desktopIcon vscode"><img src="https://media.tenor.com/SQOgkzxlYxEAAAAi/visual-studio-code.gif" alt=""></div>
             <div class="desktopIcon google" ><img src="./public/icons/google.svg" alt=""></div>
         </div>
         <section id="taskbarBody">
           
-                 <span class="window"><img src="./public/icons/window.png" alt=""></span>
+                 <!-- <span class="window"><img src="./public/icons/window.png" alt=""></span> -->
                 <span id="go-to-apps"><img src="./public/icons/appstore.svg" alt=""></span>
-                <span id="filemanager"><img src="./public/icons/filemanager .svg" alt=""></span>
+                <span id="filemanager" class="filemanager"><img src="./public/icons/filemanager .svg" alt=""></span>
           
         <section id="taskbarRight">
             <div id="taskbarApp">
@@ -82,7 +85,7 @@
                     <span class="itemOfSecond"><img src="./public/icons/wifi.svg" alt=""></span>
                 </span>    
             </section>
-            <span id="menu"><img src="./public/icons/menu.svg" alt=""></span>
+            <span id="menu"><img src="./public/icons/menu.png" alt=""></span>
         </section>
     </section>
     <section id="menubar">
@@ -107,7 +110,7 @@
                     </span>
                     </div>
                 <div class="box2">
-                    <span>
+                    <span class="">
                         <img src="./public/icons/bluetoth.svg" alt="">
                         bluetooth name
                          <img src="./public/icons/arrow.svg" alt="" style="margin-left: .5rem;">
@@ -139,14 +142,14 @@
                      <img src="./public/icons/arrow.svg" alt="" style="margin-left: .5rem;">
                     </span>
                     </div>
-                <div class="box2">
-                    <div class="ss">
+                <div class="boxof3">
+                    <div class="ss box2">
                         <span>
                             <img src="./public/icons/ss.svg" alt="">
                             Screen capture
                             </span>
                     </div>
-                    <div class="keyboard">
+                    <div class="keyboard box2">
                         <span>
                             <img src="./public/icons/keyboard.svg" alt="">
                            keyboard
@@ -171,25 +174,13 @@
                 <span class="navitems"><img src="./public/icons/edit.svg" alt=""></span>
                 <span class="navitems"><img src="./public/icons/setting.svg" alt=""></span>
             </div>
-            <span class="navitems"><img src="./public/icons/downarrow.svg" alt=""></span>
+            <span class="navitems" id="down"><img src="./public/icons/downarrow.svg" alt=""></span>
         </div>
         <div class="fourth"></div>
 
        </div>
     </section>
    
-    <!-- <section id="appwindow"> -->
-     <!-- <div class="windowHeader">
-        <div class="left">Appname</div>
-        <div class="right">
-
-            <span>M</span>
-            <span>Max</span>
-            <span>C</span>
-        </div>
-        </div> -->
-     <!-- <div id="windowContent"></div> -->
-    <!-- </section> -->
     <section id="AppStore">
      <div class="googlesearch"><img src="./public/icons/google.svg" alt=""><input type="search" placeholder="Google search here" class=""></div>
      <div class="heading">App Store</div>
@@ -210,6 +201,8 @@
 
         </div>
     </section>
+
+  
     </section>
 <script>
     const loginScreen = document.getElementById('loginScreen')
@@ -224,12 +217,30 @@
     }
  
 </script>
+<script>
+    const isSmallDevice = window.matchMedia("(max-width: 600px)");
+  
+    if (isSmallDevice.matches) {
+      alert("This OS version only for big screens !");
+    }
+  
+    // Optional: also trigger when user resizes to small screen
+    isSmallDevice.addEventListener("change", (e) => {
+      if (e.matches) {
+        alert("OS version is not for small screen!");
+      }
+    });
+  </script>
+  
     <script src="./src/main.js"></script>
     <script type="module" src="./src/components/appWindow.js"></script>
     <script type="module" src="./src/apps/sheryinas.js"></script>
     <script type="module" src="./src/apps/google.js"></script>
     <script type="module" src="./src/apps/terminal.js"></script>
     <script type="module" src="./src/apps/vscode.js"></script>
+    <script type="module" src="./src/apps/chatgpt.js"></script> 
+    <script type="module" src="./src/apps/filemanager.js"></script> 
+    <script type="module" src="./src/components/taskbar.js"></script> 
     <script type="module" src="./src/components/appstore.js"></script>
 </body>
 

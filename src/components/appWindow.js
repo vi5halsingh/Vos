@@ -93,7 +93,7 @@ export function appWindow ({title , content , id, bg}){
        appWindow.style.left = "0";
        appWindow.style.top = "0";
        appWindow.style.width = "100vw";
-       appWindow.style.height = "91.2vh";
+       appWindow.style.height = "100vh";
        pipBtn.style.display = "inline-block";
        maximizeBtn.style.display = "none";
        isMaximized = true;

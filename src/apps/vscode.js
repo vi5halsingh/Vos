@@ -33,9 +33,9 @@ windowel.forEach(element => {
     </div>`
     appWindow({title:"Vs code" , content , id:"appwindow" })
 
-    // --- File management logic ---
+
     let files = [
-      { name: 'untitled1.js', content: '' }
+      { name: 'Vos.js', content: '' }
     ];
     let currentFileIndex = 0;
 
